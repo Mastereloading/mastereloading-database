@@ -7,3 +7,6 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
   functions.logger.info("Hello logs!", {structuredData: true})
   response.send("Hello from Firebase!")
 })
+
+const webhookNotification = require('./webhooks/notification')
+exports.webhookNotificattion = functions.https.onRequest(webhookNotification)
