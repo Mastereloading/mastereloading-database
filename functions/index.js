@@ -1,12 +1,12 @@
 const functions = require('firebase-functions')
 
-// Create and Deploy Your First Cloud Functions
-// https://firebase.google.com/docs/functions/write-firebase-functions
-
 exports.helloWorld = functions.https.onRequest((request, response) => {
   functions.logger.info("Hello logs!", {structuredData: true})
   response.send("Hello from Firebase!")
 })
 
-const webhookNotification = require('./webhooks/notification')
-exports.webhookNotificattion = functions.https.onRequest(webhookNotification)
+const mastereloadingSendNotification = require('./webhooks/mastereloadingSendNotification')
+exports.mastereloadingSendNotification = functions.https.onRequest(mastereloadingSendNotification)
+
+const webhookSendNotification = require('./webhooks/notification')
+exports.webhookSendNotification = functions.https.onRequest(webhookSendNotification)
