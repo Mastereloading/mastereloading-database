@@ -1,6 +1,6 @@
 const { messaging } = require("../lib/firebase")
 
-const sendNotification = async (req, res) => {
+const sendNotification = async () => {
   const token = ['cxi8yqn4TwCs1RSDPQYLKj:APA91bHdo_IhyaQCkYuAMRbpYXsDnUrlETLoBD7JD4XofRJhyuSb9eaUpqo7j8NuTMS25taagms6i4M9jpiAj54_CDecLocRkOv6EGgshsV_jit-85PSHYgq9YTXN8L1xdlZjkmC4rMx']
   const payload = {
     notification: {
@@ -12,7 +12,7 @@ const sendNotification = async (req, res) => {
 
   await messaging.sendToDevice(token, payload)
 
-  return res.send('OK')
+  return 'OK'
 }
 
 module.exports = sendNotification
