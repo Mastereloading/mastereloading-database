@@ -7,6 +7,3 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 
 const mastereloadingSendNotification = require('./webhooks/mastereloadingSendNotification')
 exports.mastereloadingSendNotification = functions.https.onRequest(mastereloadingSendNotification)
-
-const webhookSendNotification = require('./webhooks/notification')
-exports.webhookSendNotification = functions.https.onRequest(webhookSendNotification)

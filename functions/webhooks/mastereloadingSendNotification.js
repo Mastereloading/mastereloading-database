@@ -6,6 +6,9 @@ const mastereloadingSendNotification = async (req, res) => {
     notification: {
       title: 'Notificação Masterelaoding',
       body: 'Está foi uma notificação enviada pelo aplicativo, clique em mim :)'
+    },
+    data: {
+      screen: "NotificationSpecificScreen"
     }
   }
 
